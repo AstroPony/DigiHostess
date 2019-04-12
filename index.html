@@ -110,6 +110,7 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="manifest" href="manifest.json" />
     <script defer src="vendor/jquery.min.js"></script>
+    <script defer src="vendor/confetti.min.js"></script>
     <script defer src="main.js"></script>
   </head>
 
@@ -144,22 +145,28 @@
           </h3>
         </div>
         <div id="suggestions">
-          <div class="sugg sugg-3" onclick="dataGo('next', event)">
+          <div class="sugg sugg-1" onclick="dataGo('next', event)">
             <span>Ga door na controleren</span>
           </div>
           <a href="tel:0887555555" onclick="dataGo('external', event)"
-            ><div class="sugg sugg-1">
+            ><div class="sugg sugg-2">
               <span>Bel UMC Utrecht</span>
             </div></a
           >
           <a
             href="https://www.umcutrecht.nl/nl/"
             onclick="dataGo('external', event)"
-            ><div class="sugg sugg-2">
+            ><div class="sugg sugg-3">
               <span>Meer informatie over UMC Utrecht</span>
             </div></a
           >
           <div class="sugg sugg-4">
+            <span></span>
+          </div>
+          <div class="sugg sugg-5">
+            <span></span>
+          </div>
+          <div class="sugg sugg-6">
             <span></span>
           </div>
         </div>
@@ -182,7 +189,7 @@
     </main>
     <div id="database" class="hidden">
       <h3 class="stepOne">
-        Voor wij door ga, bevestig alstublieft de volgende gegevens:<br /><br />
+        Controleren alstublieft de volgende gegevens:<br /><br />
         Uw achternaam is: <br /><b>Langenhuijsen</b><br /><br />
         Uw Voorletters zijn: <br /><b>M.</b><br /><br />
       </h3>
