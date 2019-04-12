@@ -87,4 +87,101 @@ function update() {
 $("#update a").click(update);
 
 // Update trending giphys on load
-update();
+//update();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function openChat() {
+  console.log("Input clicked");
+  document.getElementById("info").className = "hidden";
+}
+
+function viewSwap(view) {
+  if (view === "settings") {
+    $("#settings").toggleClass("hidden");
+  }
+}
+
+var pageCounter = 0;
+
+$(".sugg").on("click", function() {
+  // Incremint Counter
+  pageCounter++;
+
+  // Remove other animation classes
+  $("#main").removeClass();
+
+  // Start Animating!
+  $("#main").addClass("animate-out");
+  setTimeout(function() {
+    $("#main").removeClass("animate-out");
+    $("#main").addClass("animate-in");
+  }, 1000);
+  setTimeout(function() {
+    $("#main").removeClass("animate-in");
+  });
+  countMe(pageCounter);
+});
+
+$("#back").on("click", function() {
+  // Decriment Counter
+  pageCounter--;
+
+  // Remove other animation classes
+  $("#main").removeClass();
+
+  // Reverse Animating!
+  $("#main").addClass("re-animate-out");
+  setTimeout(function() {
+    $("#main").removeClass("re-animate-out");
+    $("#main").addClass("re-animate-in");
+  }, 750);
+  setTimeout(function() {
+    $("#main").removeClass("re-animate-in");
+  });
+  countMe(pageCounter);
+});
+
+function countMe(counter) {
+  console.log(counter);
+  // Hide/Display based on Counter
+  if (counter >= 3) {
+    $(".proger").hide();
+    $(".ml-auto").show();
+    if (counter >= 4) {
+      $("#back").show();
+    } else {
+      $("#back").hide();
+    }
+  } else {
+    $(".proger").show();
+    $(".ml-auto").hide();
+  }
+  // Hide/Display based on Content
+  // if ($(".sugg").text().length > 0) {
+
+  // }
+  $(".sugg").each(function() {
+    if (
+      $(this)
+        .find("span")
+        .text().length <= 0
+    ) {
+      $(this).hide();
+    } else {
+      $(this).show();
+    }
+  });
+}
+
+function dataGo(route, e) {
+  if (route === "external") {
+    e.preventDefault();
+    console.log("ballsack");
+  }
+}
+
+countMe();

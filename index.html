@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Giphygram</title>
+    <title>UMC Digi Hostess</title>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -107,63 +107,85 @@
     />
 
     <link rel="stylesheet" href="vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css" />
     <link rel="manifest" href="manifest.json" />
     <script defer src="vendor/jquery.min.js"></script>
     <script defer src="main.js"></script>
-
-    <style>
-      .spinner {
-        animation-name: spin;
-        animation-duration: 2000ms;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-      }
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
   </head>
 
   <body>
     <!-- Nav Header -->
-    <header class="navbar sticky-top navbar-expand bg-primary navbar-dark">
-      <!-- Logo -->
-      <img
-        src="images/logo.png"
-        alt="Giphygram"
-        width="60"
-        class="img-fluid navbar-brand"
-      />
-
-      <div id="update" class="ml-auto">
-        <a class="icon" href="#update"
-          ><img width="25" src="images/flame.png"
+    <header class="navbar sticky-top navbar-expand navbar-dark">
+      <div id="back" class="hidden"></div>
+      <div class="ml-auto hidden">
+        <a onclick="viewSwap('settings')" class="side-icons" href="#"
+          ><img width="30" height="30" src="images/outlined.svg"
         /></a>
-        <img class="icon d-none spinner" width="20" src="images/sync.png" />
+        <a onclick="viewSwap('apps')" class="side-icons" href="#"
+          ><img width="25" src="images/apps.svg"
+        /></a>
       </div>
     </header>
 
     <!-- Main Conatainer -->
-    <main class="container p-1">
+    <main class="container">
       <!-- Error Alert -->
       <div class="alert alert-danger text-center m-1" style="display:none;">
-        Could not update Giphy's
+        You need to connect to the internet to continue.
       </div>
+      <div id="settings" class="hidden"></div>
 
-      <!-- Giphys -->
-      <div id="giphys" class="row no-gutters"></div>
-
+      <div id="main">
+        <div class="personal">
+          <h3 class="welcome">
+            Beste mevrouw Langenhuijsen, welkom bij het UMC Utrecht. Het eerste
+            wat we u willen vragen is om uw gegevens te controleren. U kunt nu
+            aangegeven of deze kloppen.
+          </h3>
+        </div>
+        <div id="suggestions">
+          <div class="sugg sugg-3" onclick="dataGo('next', event)">
+            <span>Ga door na controleren</span>
+          </div>
+          <a href="tel:0887555555" onclick="dataGo('external', event)"
+            ><div class="sugg sugg-1">
+              <span>Bel UMC Utrecht</span>
+            </div></a
+          >
+          <a
+            href="https://www.umcutrecht.nl/nl/"
+            onclick="dataGo('external', event)"
+            ><div class="sugg sugg-2">
+              <span>Meer informatie over UMC Utrecht</span>
+            </div></a
+          >
+          <div class="sugg sugg-4">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div id="chat">
+        <input type="text" placeholder="Start typing..." class="chat-input" />
+        <button>Send</button>
+      </div>
+      <div class="proger">
+        <div class="prog-i prog-1"></div>
+        <div class="prog-i prog-2" style="opacity: 0.2;"></div>
+        <div class="prog-i prog-3" style="opacity: 0.2;"></div>
+      </div>
       <noscript>
         <div class="text-center mt-5">
-          Giphygram requires Javascript to function. <br />
+          The application requires Javascript to function. <br />
           <small>Please enable Javascript in your browser settings.</small>
         </div>
       </noscript>
     </main>
+    <div id="database" class="hidden">
+      <h3 class="stepOne">
+        Voor wij door ga, bevestig alstublieft de volgende gegevens:<br /><br />
+        Uw achternaam is: <br /><b>Langenhuijsen</b><br /><br />
+        Uw Voorletters zijn: <br /><b>M.</b><br /><br />
+      </h3>
+    </div>
   </body>
 </html>

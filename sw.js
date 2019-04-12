@@ -1,6 +1,6 @@
 // SW Versioning
 
-const version = "0.3";
+const version = "0.4";
 
 // Cache City
 const appAssets = [
@@ -10,7 +10,8 @@ const appAssets = [
   "images/logo.png",
   "images/sync.png",
   "vendor/bootstrap.min.css",
-  "vendor/jquery.min.js"
+  "vendor/jquery.min.js",
+  "main.css"
 ];
 
 // SW Install
