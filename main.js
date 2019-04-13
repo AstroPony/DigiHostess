@@ -229,5 +229,10 @@ function dataGo(route, e) {
     }
   }
 }
+console.log($(window).height());
+if ($(window).height() < 590) {
+  $(".sugg").css("min-height", "60px");
+  $("#suggestions").css("font-size", "12px");
+}
 
 countMe();

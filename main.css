@@ -9,7 +9,7 @@ body {
 }
 .personal h3 {
   background-image: linear-gradient(344deg, #008aec, #0056f1);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
@@ -46,8 +46,8 @@ body {
   display: none;
 }
 .personal {
-  margin: 100px auto 0;
-  width: 70%;
+  margin: 20px auto 0;
+  width: 65%;
 }
 .ml-auto {
   position: absolute;
@@ -104,7 +104,7 @@ body {
   border: 1px solid #008aec;
   color: #008aec;
   float: left;
-  margin: 5px 15px;
+  margin: 5px 12px;
   transition: background-color 0.25s ease;
   position: relative;
 }

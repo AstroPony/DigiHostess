@@ -1,6 +1,6 @@
 // SW Versioning
 
-const version = "1.0b";
+const version = "1.0c";
 
 // Cache City
 const appAssets = [
