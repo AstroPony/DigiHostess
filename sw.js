@@ -1,16 +1,19 @@
 // SW Versioning
 
-const version = "0.4";
+const version = "1.0a";
 
 // Cache City
 const appAssets = [
   "index.html",
   "main.js",
-  "images/flame.png",
-  "images/logo.png",
-  "images/sync.png",
+  "images/apps.svg",
+  "images/filled.svg",
+  "images/outlined.svg",
+  "images/send.svg",
+  "images/settings.svg",
   "vendor/bootstrap.min.css",
   "vendor/jquery.min.js",
+  "vendor/confetti.min.js",
   "main.css"
 ];
 

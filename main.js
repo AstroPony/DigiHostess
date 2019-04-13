@@ -212,10 +212,18 @@ function dataGo(route, e) {
       $(".stepTwo").replaceWith(
         "<h3 class='stepThree'>We kunnen u helpen met het plannen van een (bel)afspraak, voorbereiden van uw reis en andere tips om uw bezoek zo aangenaam mogelijk te maken</h3>"
       );
-      $(".sugg-1").html("<span>Hoe kan ik mij voorbereiden?</span>");
-      $(".sugg-2").html("<span>Meer informatie over de poli</span>");
-      $(".sugg-3").html("<span>Meer UMC Utrecht en wat er te doen is</span>");
-      $(".sugg-4").html("<span>Help mijn route plannen</span>");
+      $(".sugg-1").html(
+        "<a href='https://digid.nl/inloggen'><span>Hoe kan ik mij voorbereiden?</span></a>"
+      );
+      $(".sugg-2").html(
+        "<a href='https://www.umcutrecht.nl/nl/Ziekenhuis/Afdelingen/allergologie'><span>Meer informatie over de poli</span></a>"
+      );
+      $(".sugg-3").html(
+        "<a href='https://www.umcutrecht.nl/nl/Ziekenhuis/In-het-ziekenhuis/Faciliteiten/Winkels-en-restaurants'><span>Meer UMC Utrecht en wat er te doen is</span></a>"
+      );
+      $(".sugg-4").html(
+        "<a href='https://www.umcutrecht.nl/nl/Over-Ons/Contact-route/Parkeren-UMC-Utrecht'><span>Help mijn route plannen</span></a>"
+      );
       $(".sugg-5").html("<span>pas afspraak aan</span>");
       $(".sugg-6").html("<span>Wilt u deze informatie delen?</span>");
     }
